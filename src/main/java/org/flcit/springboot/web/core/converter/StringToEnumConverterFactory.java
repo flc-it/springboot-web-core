@@ -22,7 +22,6 @@ import org.springframework.core.convert.TypeDescriptor;
 import org.springframework.core.convert.converter.ConditionalConverter;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.ConverterFactory;
-import org.springframework.lang.Nullable;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
@@ -75,7 +74,6 @@ public final class StringToEnumConverterFactory implements ConverterFactory<Stri
         }
 
         @Override
-        @Nullable
         public T convert(String source) {
             if (source.isEmpty()) {
                 // It's an empty enum identifier: reset the enum value to null.

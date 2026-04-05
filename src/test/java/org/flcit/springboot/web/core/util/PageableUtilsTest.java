@@ -135,12 +135,12 @@ class PageableUtilsTest {
     void compareTest() throws ReflectiveOperationException {
         assertNull(PageableUtils.compare(null, null, null, false, null, null));
         Method method = mock(Method.class);
-        when(method.getReturnType()).then((i) -> String.class);
+        when(method.getReturnType()).then(i -> String.class);
         when(method.invoke(isNull())).thenThrow(IllegalAccessException.class);
         assertNull(PageableUtils.compare(method, null, null, false, null, null));
 
         method = mock(Method.class);
-        when(method.getReturnType()).then((i) -> Object.class);
+        when(method.getReturnType()).then(i -> Object.class);
         when(method.invoke(isNull())).thenReturn(null);
         assertNull(PageableUtils.compare(method, null, null, false, null, null));
     }
@@ -210,6 +210,7 @@ class PageableUtilsTest {
             return enfant;
         }
         public void getFake() {
+            // Empty
         }
         public Object getRealFake() {
             return fake;
@@ -238,6 +239,7 @@ class PageableUtilsTest {
             return name;
         }
         public void getParent() {
+            // Empty
         }
         public Object getRealParent() {
             return parent;
@@ -317,8 +319,8 @@ class PageableUtilsTest {
         assertTrue(PageableUtils.filter(new CustomParentObject(null, "name1", null, null, null, null), obj));
 
         assertTrue(PageableUtils.filter(new CustomFilterObject(8, "TEST"), objNull));
-        assertFalse(PageableUtils.filter(new CustomFilterObject(new Long(5), "name"), obj));
-        assertFalse(PageableUtils.filter(new CustomFilterObject(new Long(5), "name5"), obj, "getName"));
+        assertFalse(PageableUtils.filter(new CustomFilterObject(Long.valueOf(5), "name"), obj));
+        assertFalse(PageableUtils.filter(new CustomFilterObject(Long.valueOf(5), "name5"), obj, "getName"));
     }
 
 }

@@ -16,7 +16,7 @@
 
 package org.flcit.springboot.web.core.domain;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
