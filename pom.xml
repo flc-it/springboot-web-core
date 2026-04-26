@@ -51,7 +51,7 @@
         <!-- Internal dependencies version -->
         <org.flcit.springboot.commons.core.version>1.0.0</org.flcit.springboot.commons.core.version>
         <org.flcit.springboot.commons.test.version>1.0.0</org.flcit.springboot.commons.test.version>
-        <!-- External dependency version -->
+        <!-- External dependencies version -->
     </properties>
 
     <!-- dependencies management -->
