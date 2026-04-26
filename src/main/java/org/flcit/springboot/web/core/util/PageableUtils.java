@@ -28,10 +28,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.domain.Sort.NullHandling;
 import org.springframework.util.StringUtils;
-
-import org.flcit.springboot.commons.core.exception.WrongOrderColumnException;
 import org.flcit.commons.core.util.ObjectUtils;
 import org.flcit.commons.core.util.ReflectionUtils;
+import org.flcit.springboot.web.core.exception.WrongOrderColumnException;
 
 /**
  * 
